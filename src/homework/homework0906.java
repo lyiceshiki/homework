@@ -1,5 +1,8 @@
 package homework;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class homework0906 {
     public static  void main(String arg[]){
         
@@ -97,7 +100,9 @@ public class homework0906 {
         sb.insert(10,"java");//0 y 1 o 2 u 3 t 4 u 5 b 6 e 7 - 8 - 9 ? 10 j 11 a 12 v 13 a
         System.out.println(sb);
         sb.delete(7,10);
-        System.out.print(sb);
+        System.out.println(sb);
+        sb.reverse();
+        System.out.println("返回值：" + sb);
         StringBuffer sBuffer = new StringBuffer("\n视频网址：");
         sBuffer.append("www.");
         sBuffer.append("youtube");
@@ -107,8 +112,8 @@ public class homework0906 {
         System.out.println(sBuffer);
         System.out.println(sBuffer.capacity());
         System.out.println(sBuffer.length());
-
 */
+
 
 /* //26位アルファベット
         char arr[] = new char[26];
@@ -203,14 +208,53 @@ public class homework0906 {
         System.out.println("最大値は" + max);
 */
 
-/* */
+/* 
         double[] aList = {11.0 , 12.9 , 14.7 , 19};
         
         for (double element: aList) {
             System.out.println(element);
         }
 
+        //printArray(new int[]{3,1,2,6,4,2});
+        int[] arr = {'a', 25 ,45 ,78 ,'z', 'A'};
+        System.out.println(Arrays.toString(arr));//結果は[97, 25, 45, 78, 122, 65]
+        //int arr1 = arr[6];////Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
+        int arr1 = arr[5];
+        System.out.println(arr1);
+*/        
+
+/* */
+        int[] arr = {1, 2, 4, 5, 7};
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+        //arr = homework0906.reverse(arr);
+        arr = reverse(arr);
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+
 
     }
 
+    public static int[] reverse(int[] arr) {
+       /*  方案1
+        int n = arr.length;
+        for (int i = 0; i < n / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[n - 1 - i];
+            arr[n - 1- i] = temp;
+        
+        }
+        return arr;*/
+
+        /* 方案2 */
+        int[] result = new int[arr.length];
+        for ( int i = 0, j = result.length - 1; i < arr.length ; i++ ,j-- ) {
+            result[j] = arr[i];
+        }
+        return result;
+    }
 }
