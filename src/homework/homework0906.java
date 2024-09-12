@@ -172,7 +172,7 @@ public class homework0906 {
             }
         }
 */        
-/* */
+/* 
         int size = 10;
         double[] aList = new double[size];
         aList[0] = 1.2;
@@ -201,7 +201,14 @@ public class homework0906 {
             } 
         }
         System.out.println("最大値は" + max);
+*/
 
+/* */
+        double[] aList = {11.0 , 12.9 , 14.7 , 19};
+        
+        for (double element: aList) {
+            System.out.println(element);
+        }
 
 
     }
