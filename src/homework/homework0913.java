@@ -18,7 +18,9 @@ public class homework0913 {
         //dateSearch();
         //dateTrans();
         //dateParse();
-        dateCalender();
+        //dateCalender();
+        dateGreCal();
+        monthCal();
 }
 
 
@@ -160,9 +162,48 @@ public class homework0913 {
     System.out.print(months[gCalendar.get(Calendar.MONTH)]);
     System.out.print(" " + gCalendar.get(Calendar.DATE) + " ");
     System.out.println(year = gCalendar.get(Calendar.YEAR));
+    System.out.print("Time: ");
+    System.out.print(gCalendar.get(Calendar.HOUR) + ":");
+    System.out.print(gCalendar.get(Calendar.MINUTE) + ":");
+    System.out.println(gCalendar.get(Calendar.SECOND));
+
+
+    if (gCalendar.isLeapYear(year)) {
+        System.out.println("当前年份是闰年");
+    } else {
+        System.out.println("当前年份不是闰年");
+    }
+    }
+
+    private static void monthCal() {
+        Calendar c1 = Calendar.getInstance();
+        //月份是从0开始
+        c1.set(2024, 1, 1);
+
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
+        //年份和日期是从1开始
+        c1.set(2024, 1, 0);
+        //当日期为0的时候，月份会变成上个月，显示为0，日期变为31
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
     
+        c1.set(2024, 2, 1);
 
-
-
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
+        
+        c1.set(2024, 2, 0);
+        //上个月最后一天是29号
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
+    
+        c1.set(2024, 2, -10);
+        //日期为负数时 29-10=19
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
+        
+        c1.set(2024, -2, 1);
+        //月份为负数的时候 12-2=10 
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
+    
+        c1.set(-2024, 2, 1);
+        //年份为负数时，会变成绝对值+1
+        System.out.println(c1.get(Calendar.YEAR) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.DATE));
     }
 }
