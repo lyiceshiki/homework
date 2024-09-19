@@ -223,7 +223,7 @@ public class homework0906 {
         System.out.println(arr1);
 */        
 
-/* */
+///* 
         int[] arr = {1, 2, 4, 5, 7};
         for (int i : arr) {
             System.out.print(i + " ");
@@ -235,6 +235,19 @@ public class homework0906 {
         for (int i : arr) {
             System.out.print(i + " ");
         }
+
+        System.out.println();
+        String str = "hellowworld";
+        //char arr2 = str.toCharArray();//出错
+        char[] arr2 = str.toCharArray();
+        for (int i = 0 ; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
+            arr2[i] -= 32;
+            System.out.print(arr2[i] + " ");
+        }
+        System.out.println();
+        System.out.println(new String(arr2));
+//*/
 
 
     }
@@ -257,4 +270,15 @@ public class homework0906 {
         }
         return result;
     }
+/* 
+    public boolean isExist() {
+        //if( this == null){
+            //return false;
+        //}
+            if ( this != null) {
+            return true;
+        }    
+        
+    }
+*/
 }
