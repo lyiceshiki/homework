@@ -1,20 +1,21 @@
 package homework.transport;
 
+import homework.transport.trans.Bmwi3;
 import homework.transport.trans.Car;
 import homework.transport.trans.Ecar;
 
 public class AppTransport {
     public static void main(String[] args) {
-        /* 
+        ///* 
         Car car1 = new Car();
         car1.setName( "Toyota");
         car1.run();
 
-        Car car2 = new Car("Nissan");
+        Car car2 = new Car("Nissan","Silver");
         car2.run();
 
         car2.place("Sunshine Street");
-        */
+        //*/
 
         Ecar ecar1 = new Ecar();
         ecar1.setName("Honda");
@@ -28,8 +29,8 @@ public class AppTransport {
         Ecar e1 = (Ecar)c3;
         e1.run();
         
-
-
+        Bmwi3 bmw = new Bmwi3("Bmwi3 2014", "Silver");
+        bmw.run();
         
 
     }

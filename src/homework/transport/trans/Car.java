@@ -4,17 +4,19 @@ public class Car {
 
     public static String classname = Car.class.getSimpleName();
     private String name;
+    private String carColor;
 
     public Car(){
         super();
     }
 
-    public Car(String name){
+    public Car(String name, String carColor){
         this.name = name;
+        this.carColor = carColor;
     }
 
     public void run(){
-        System.out.println(this.name + " is running.");
+        System.out.println(this.carColor + " " + this.name + " is running.");
     }
 
     public String getName() {
