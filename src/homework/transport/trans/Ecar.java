@@ -1,5 +1,7 @@
 package homework.transport.trans;
 
+import homework.item.Print;
+
 public class Ecar extends Car {
     
     private String name = new String();
@@ -22,8 +24,10 @@ public class Ecar extends Car {
 
     @Override
     public void run() {
-        System.out.println(String.format("Car %s %s is running.",carColor, getName()));
+        //System.out.println(String.format("Car %s %s is running.",carColor, getName()));
         System.out.println(String.format("Car %s %s is running.", carColor ,this.name));
+
+        Print.printColored(String.format("Car %s %s is running.",carColor, getName()), Print.BLUE);
     }
 
     public String getName(){

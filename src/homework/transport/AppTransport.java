@@ -6,7 +6,7 @@ import homework.transport.trans.Ecar;
 
 public class AppTransport {
     public static void main(String[] args) {
-        ///* 
+        /* 
         Car car1 = new Car();
         car1.setName( "Toyota");
         car1.run();
@@ -15,7 +15,7 @@ public class AppTransport {
         car2.run();
 
         car2.place("Sunshine Street");
-        //*/
+        */
 
         Ecar ecar1 = new Ecar();
         ecar1.setName("Honda");
