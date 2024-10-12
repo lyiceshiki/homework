@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter;
 
 public class homework0912 {
     public static void main(String[] args) {
-        print("step 1",methodTest.demo1(1, 2));
-        print("step 2",methodTest.demo2(1, 2));
+        
+        
     }
 
     private static void print(String message, String text){
@@ -47,4 +47,4 @@ public class homework0912 {
 
     }
 
-}
+

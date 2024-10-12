@@ -4,7 +4,7 @@ public class Human {
     private String gender;
 
     public Human(){
-        this(id:1,name:"human",gender:"man");
+        
     }
 
     public Human(int id){
