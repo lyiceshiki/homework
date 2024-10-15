@@ -11,6 +11,7 @@ public class Cat {
     private int age;
     private String color;
     private String time;
+    private String randomItem;
 
     public Cat(String name, String sex, int age, String color){
         this.name = name;
@@ -39,6 +40,10 @@ public class Cat {
         this.time = time;
     }
 
+    public void setRandomitem(String randomItem){
+        this.randomItem = randomItem;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -57,6 +62,10 @@ public class Cat {
 
     public String getTime(){
         return this.time;
+    }
+
+    public String getRandomItem(){
+        return this.randomItem;
     }
 
     public String createNamePlate(Function<Cat,String> creater){
@@ -98,18 +107,69 @@ public class Cat {
 
     public String timeToSleep(Function<Cat,String> sleep){
         String sleepTime = sleep.apply(this);
+        
+        System.out.println();
         System.out.println("-----sleepTime-----");
         Print.printColored(sleepTime, Print.PURPLE);
         return "";
     }
 
+    public String timeToPlay(Function<Cat,String> play){
+        
+        String[] item = {"ball", "doll", "toilet paper", "slipper"};
+        int randomItemIndex = (int)(Math.random() * item.length);
+        //String randomItem = item[randomItemIndex];
+        //String playTime = play.apply(randomItem);
+        this.randomItem = item[randomItemIndex];
+        String playTime = play.apply(this);
+
+        System.out.println();
+        System.out.println("-----playTime-----");
+        Print.printColored(playTime, Print.RED);
+        return playTime;
+    }
+
+    public String eatLunch(Function<Cat, String> eat){
+        String lunch = eat.apply(this);
+        System.out.println();
+        System.out.println("-----lunch time-----");
+        Print.printColored(lunch, Print.YELLOW);
+        return "";
+    }
     
-    
+    public String eatDinner(Function<Cat, String> eat){
+        String dinner = eat.apply(this);
+        System.out.println();
+        System.out.println("-----dinner time-----");
+        Print.printColored(dinner, Print.YELLOW);
+        return "";
+    }
+
+    public String timeToSnack(Function<Cat, String>snack){
+        
+        
+        return "";
+    }
 
 
      
+/* 
+12:30 wake up  1
+13:00 play     1
+13:30 lunch    1
+14:00 sleep    1
+15:00 play     1
+16:00 sleep    1
+18:00 dinner   1
+18:30 play     1
+20:00          
+21:00 sleep
+0:00 eat
+0:30 play
+2:00 sleep
 
 
+*/
 
 
 
