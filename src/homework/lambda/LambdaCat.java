@@ -30,6 +30,7 @@ public class LambdaCat {
 
         myCat.setTime("16:00");
         myCat.timeToSleep(a -> a.getName() + " sleep at " + a.getTime() + ".");
+        myCat.emotionBad();
 
         myCat.setTime("18:00");
         myCat.eatDinner(a -> a.getName() + "'s dinner are cat food and water.\nDinner time is at " + a.getTime() + ".");
@@ -38,13 +39,14 @@ public class LambdaCat {
         myCat.timeToPlay(a -> a.getName() + " is playing with " +a.getRandomItem() + " at " + a.getTime());
 
         myCat.setTime("20:00");
-
+        myCat.timeToSnack(a -> a.getName() + " is eating " + a.getRandomTreat() + " at " + a.getTime());
+        myCat.emotionGood();
 
         myCat.setTime("21:00");
         myCat.timeToSleep(a -> a.getName() + " sleep at " + a.getTime() + ".");
 
         myCat.setTime("00:00");
-
+        myCat.timeToSnack(a -> a.getName() + " is eating " + a.getRandomTreat() + " at " + a.getTime());
 
         myCat.setTime("00:30");
         myCat.timeToPlay(a -> a.getName() + " is playing with " +a.getRandomItem() + " at " + a.getTime());

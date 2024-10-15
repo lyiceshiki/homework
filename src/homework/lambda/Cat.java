@@ -12,6 +12,7 @@ public class Cat {
     private String color;
     private String time;
     private String randomItem;
+    private String randomTreat;
 
     public Cat(String name, String sex, int age, String color){
         this.name = name;
@@ -44,6 +45,10 @@ public class Cat {
         this.randomItem = randomItem;
     }
 
+    public void setRandomTreat(String randomTreat){
+        this.randomTreat = randomTreat;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -66,6 +71,10 @@ public class Cat {
 
     public String getRandomItem(){
         return this.randomItem;
+    }
+
+    public String getRandomTreat(){
+        return this.randomTreat;
     }
 
     public String createNamePlate(Function<Cat,String> creater){
@@ -146,9 +155,15 @@ public class Cat {
     }
 
     public String timeToSnack(Function<Cat, String>snack){
-        
-        
-        return "";
+        String[] catTreat = {"Soft Cat treat", "Catnip Treats", "Cat Biscuits", "Freeze-Dried Meat"};
+        int randomTreatIndex = (int)(Math.random() * catTreat.length);
+        this.randomTreat = catTreat[randomTreatIndex];
+        String snackTime = snack.apply(this);
+
+        System.out.println();
+        System.out.println("-----snack time-----");
+        Print.printColored(snackTime, Print.CYAN);
+        return snackTime;
     }
 
 
