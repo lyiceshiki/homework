@@ -177,11 +177,11 @@ public class Cat {
 16:00 sleep    1
 18:00 dinner   1
 18:30 play     1
-20:00          
-21:00 sleep
-0:00 eat
-0:30 play
-2:00 sleep
+20:00 eat      1         
+21:00 sleep    1
+0:00 eat       1
+0:30 play      1
+2:00 sleep     1
 
 
 */
